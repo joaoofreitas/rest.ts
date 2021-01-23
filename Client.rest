@@ -1,3 +1,17 @@
-GET http://localhost:3000/
+####
+GET http://localhost:3000/todo
 
-###
+####
+POST http://localhost:3000/todo HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Title 43",
+    "subTitle": "This is a subtitle",
+    "body": "Lorem Ipsum Dolor Amet"
+}
+
+####
+GET http://localhost:3000/todo/600c95065439ae7d03068d72
+
+####

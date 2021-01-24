@@ -1,4 +1,3 @@
-import { Mongoose } from "mongoose";
 import { Document } from 'mongoose'
 
 interface ITodo extends Document {

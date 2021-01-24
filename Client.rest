@@ -6,7 +6,7 @@ POST http://localhost:3000/todo HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Title 1",
+    "title": "Title 2",
     "subtitle": "This is a random subtitle",
     "body": "Lorem Ipsum Dolor Amet to edit"
 }
@@ -20,9 +20,8 @@ PATCH http://localhost:3000/todo/600dadd5be856e08f22ad00f
 content-type: application/json
 
 {
-    "subtitle": "This was edited again and again..."
+    "subtitle": "This was edited again and again and again..."
 }
 
 ####
-
 DELETE http://localhost:3000/todo/600dabefb15fe508b73dc041

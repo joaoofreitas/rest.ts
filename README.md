@@ -6,18 +6,18 @@ ___A REST API MVC template for Typescript + Node + Express + Mongo.___
 
 #### The Design Pattern 🏛
 
-This template uses a kind of __MVC__ (_Model-View-Controller_) architecture. So basically you have Models _(created at models/interfaces folder)_, and Controllers that handle requests and display a certain _View_ _(in this case a certain HTTP reponse)_.
+This template uses a kind of __MVC__ (_Model-View-Controller_) architecture. So basically you have Models _(created at models/interfaces folder)_, and Controllers that handle requests and display a certain _View_ _(in this case a certain HTTP response)_.
 
 #### Dependencies 👾
 
 - [TypeScript](http://typescriptlang.org/)
-    - To make our JavaScript code stactily typed so our code is less susceptible to errors and bugs.
+    - To make our JavaScript code statically typed so our code is less susceptible to errors and bugs.
 - [Express](http://expressjs.com)
     - Our server and HTTP Request Handler.
 - [Mongoose](https://mongoosejs.com/docs/)
     - Our alternative client to MongoDB databases.
 - [Dotenv](https://www.npmjs.com/package/dotenv)
-    - A package to hide our secrets in enviroment variables.
+    - A package to hide our secrets in environment variables.
 
 #### The file structure 🗄
 
@@ -55,7 +55,7 @@ This template uses a kind of __MVC__ (_Model-View-Controller_) architecture. So 
 
 `dev@machine touch .env`
 
-- Edit the _.env_ file and insert the following enviroment variable _(changing the value to your MongoDB connection string)_:
+- Edit the _.env_ file and insert the following environment variable _(changing the value to your MongoDB connection string)_:
 
 `DB_HOST=YOUR_MONGODB_CONNECTION_URL`
 

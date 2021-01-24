@@ -21,23 +21,24 @@ This template uses a kind of __MVC__ (_Model-View-Controller_) architecture. So 
 
 #### The file structure 🗄
 
+```bash
 📦rest.ts
- ┣ 📂controllers -> Insert here your controllers/handlers for CRUD HTTP_ Requests...
- ┃ ┗ 📜todo.ts -> Sample file with CRUD Operations...
- ┣ 📂interfaces -> Interfaces with the basic API properties, simplified...
- ┃ ┗ 📜todo.ts -> Sample file of an interface
- ┣ 📂models -> Folder that contains the files to generate a model in MongoDB to create a Schema...
- ┃ ┗ 📜todo.ts -> Sample file of a model
- ┣ 📜.env -> Create this file and generate the __Key:__ _DB_HOST_ with your database connection as a __VALUE:__ _Your MongoDB Connection Secret URL_
+ ┣ 📂controllers            # Insert here your controllers/handlers for CRUD HTTP_ Requests...
+ ┃ ┗ 📜todo.ts              # Sample file with CRUD Operations...
+ ┣ 📂interfaces             # Interfaces with the basic API properties, simplified...
+ ┃ ┗ 📜todo.ts              # Sample file of an interface
+ ┣ 📂models                 # Folder that contains the files to generate a model in MongoDB to create a Schema...
+ ┃ ┗ 📜todo.ts              # Sample file of a model
+ ┣ 📜.env                   # Create this file and generate the Key: DB_HOST with your database connection as a VALUE:_Your MongoDB Connection Secret URL_
  ┣ 📜.gitignore
- ┣ 📜Client.rest -> Testing the API using REST Client extension in VSCode
+ ┣ 📜Client.rest            # Testing the API using REST Client extension in VSCode
  ┣ 📜LICENSE
  ┣ 📜README.md
  ┣ 📜package-lock.json
  ┣ 📜package.json
- ┣ 📜server.ts -> Main server file, it serves as uses routes created in the controllers folder...
+ ┣ 📜server.ts              # Main server file, it serves as uses routes created in the controllers folder...
  ┗ 📜tsconfig.json
-
+```
 
 #### How to get started 🏁
 

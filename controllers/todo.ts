@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/', async (req, res) => {
     try {
         const todos = await Todo.find()
-        res.json(todos)
+        res.status(200).json(todos)
     }
     catch (err) {
         res.status(500).json({ message: err.message })
@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
         res.status(200).json(todo)
     } 
     catch (err){
-        res.status(500).json(err)
+        res.status(404).json(err)
     }
 });
 
@@ -55,25 +55,40 @@ router.patch('/:id', async (req, res) => {
             await todo.save()
         }
         else {
-            res.status(400).json({message: "Something is wrong with this request..."})
+            res.status(404).json({message: "Something is wrong with this request..."})
         }
 
-        res.status(200).json(todo)
+        res.status(202).json(todo)
     } 
     catch (err) {
         res.status(400).json({ message: err.message })
     }
 });
 
+// Delete All
+router.delete('/', async (req, res) => {
+    try {
+        const todo = await Todo.deleteMany();
+        res.status(202).json(todo)
+    }
+    catch (err) {
+        res.status(204).json({ message: err.message })
+    }
+})
+
 // Deleting by ID
 router.delete('/:id', async (req, res) => {
     try {
         const todo = await Todo.findById(req.params.id)
         todo?.delete()
+
+        res.status(202).json(todo)
     }
     catch (err) {
         res.status(400).json({ message: err.message })
     }
 });
+
+
 
 export default router;

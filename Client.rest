@@ -24,4 +24,7 @@ content-type: application/json
 }
 
 ####
-DELETE http://localhost:3000/todo/600dabefb15fe508b73dc041
+DELETE http://localhost:3000/todo/600ddd7fb1830f17cb127fbb
+
+####
+DELETE http://localhost:3000/todo

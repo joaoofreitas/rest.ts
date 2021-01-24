@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import 'dotenv/config'
 
-import todo from './routes/todo'
+import todo from './controllers/todo'
 
 const dbURL = (process.env.DB_HOST != null) ? process.env.DB_HOST : ''
 mongoose.connect(dbURL, { useUnifiedTopology: true , useNewUrlParser: true})

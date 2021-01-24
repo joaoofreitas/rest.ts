@@ -1,29 +1,14 @@
-import mongoose from 'mongoose'
+import mongoose, { Schema } from 'mongoose'
+import ITodo from '../interfaces/todo'
 
-const todoSchema = new mongoose.Schema(
-    {
-        title: 
-        {
-            type: String,
-            required: true
-        },
-        subTitle: 
-        {
-            type: String,
-            required: true
-        },
-        body: 
-        {
-            type: String,
-            required: true
-        },
-        date: 
-        {
-            type: Date,
-            required: true,
-            default: Date.now()
-        }
-    }
-)
 
-export default mongoose.model('Todo', todoSchema)
+const TodoSchema: Schema = new Schema({
+    title: {type: String, required: true},
+    subtitle: {type: String, required: true},
+    body: {type: String, required: true}
+},
+{
+    timestamps: true
+})
+
+export default mongoose.model<ITodo>('Todo', TodoSchema)

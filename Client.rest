@@ -6,12 +6,23 @@ POST http://localhost:3000/todo HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Title 43",
-    "subTitle": "This is a subtitle",
-    "body": "Lorem Ipsum Dolor Amet"
+    "title": "Title 1",
+    "subtitle": "This is a random subtitle",
+    "body": "Lorem Ipsum Dolor Amet to edit"
 }
 
 ####
-GET http://localhost:3000/todo/600c95065439ae7d03068d72
+GET http://localhost:3000/todo/600dadd5be856e08f22ad00f
 
 ####
+
+PATCH http://localhost:3000/todo/600dadd5be856e08f22ad00f
+content-type: application/json
+
+{
+    "subtitle": "This was edited again and again..."
+}
+
+####
+
+DELETE http://localhost:3000/todo/600dabefb15fe508b73dc041
